@@ -187,16 +187,16 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-    title='Mirrorbot Help',
+    title='KOT MIRROR BOT',
     content=help_string_telegraph,
 )["path"]
 
-help_string = '\x1f𝑹𝒆𝒂𝒅 𝑪𝒐𝒎𝒎𝒂𝒏𝒅 𝑩𝒆𝒍𝒐𝒘\x1f'
+help_string = '\x1Hᴏᴡ Tᴏ Usᴇ Mᴇʜ\x1f'
 
 
 def bot_help(update, context):
     button = button_build.ButtonMaker()
-    button.buildbutton("𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀", f"https://telegra.ph/{help}")
+    button.buildbutton("Pɪɴɢ Hᴇᴀʀ", f"https://telegra.ph/{help}")
     reply_markup = InlineKeyboardMarkup(button.build_menu(1))
     sendMarkup(help_string, context.bot, update, reply_markup)
 
@@ -244,11 +244,11 @@ def main():
     # Heroku restarted
     GROUP_ID = f'{RESTARTED_GROUP_ID}'
     kie = datetime.now(pytz.timezone(f'{TIMEZONE}'))
-    jam = kie.strftime('\n📅 𝘿𝘼𝙏𝙀: %d/%m/%Y\n⏲️ 𝙏𝙄𝙈𝙀: %I:%M%P')
+    jam = kie.strftime('\n📅 𝘿𝘼𝙏𝙀: %d/%m/%Y\n⏲️ 𝙏𝙄𝙈𝙀: %I:%M%P @KOT_BOTS')
     if GROUP_ID is not None and isinstance(GROUP_ID, str):
         try:
             dispatcher.bot.sendMessage(
-                f"{GROUP_ID}", f"♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️\n{jam}\n\n🗺️ 𝙏𝙄𝙈𝙀 𝙕𝙊𝙉𝙀\n{TIMEZONE}\n\n𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴-𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙰𝙶𝙰𝙸𝙽\n\n#Restarted")
+                f"{GROUP_ID}", f"♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️\n{jam}\n\n🗺️ 𝙏𝙄𝙈𝙀 𝙕𝙊𝙉𝙀\n{TIMEZONE}\n\n𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴-𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙰𝙶𝙰𝙸𝙽\n\n#Restarted POWER BY : @KOT_BOTS")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
