@@ -57,4 +57,4 @@ class TelegraphHelper:
 			return self.edit_page(path, title, content)
 
 
-telegraph=TelegraphHelper('Mirror bot', 'https://github.com/anime-republic/MIRROR-HUNTER')
+telegraph=TelegraphHelper('SOURCE CODE', 'https://t.me/KOT_SOURCE_')
